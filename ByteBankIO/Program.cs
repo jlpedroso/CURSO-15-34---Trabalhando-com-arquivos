@@ -13,7 +13,9 @@ partial class Program
             // CriarArquivoComWriter();
             // CriarArquivoComWriteLine();
             //EscritaBinaria();
-            LeituraBinaria();
+            //LeituraBinaria();
+            UsarStreamDeEntrada();
+
 
             Console.WriteLine("Atividades realizadas com sucesso.");
 
