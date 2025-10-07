@@ -1,27 +1,32 @@
-﻿partial class Program
+﻿using ByteBankIO;
+
+partial class Program
 {
     static void Main(string[] args)
     {
         // LidandoComFileStreamDiretamente();
+        // UsandoStreamReader();
 
-        var enderecoDoArquivo = "contas.txt";
-
-        using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open)) 
+        try
         {
-            var leitor = new StreamReader(fluxoDeArquivo);
-            //            var linha = leitor.ReadLine();
+            // CriarArquivo();
+            // CriarArquivoComWriter();
+            // CriarArquivoComWriteLine();
+            //EscritaBinaria();
+            LeituraBinaria();
 
-            while (!leitor.EndOfStream) 
-            {
-                Console.WriteLine(leitor.ReadLine());
-            }
+            Console.WriteLine("Atividades realizadas com sucesso.");
+
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Erro ao criar ao arquivo" + ex.ToString());
+        }
+
 
         Console.WriteLine();
         Console.Write("Pressione enter para sair");
         Console.ReadLine();
-
-        
     }
 
 }
